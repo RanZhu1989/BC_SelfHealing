@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Home &#8212; IntelliHealer 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="install.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <embed>
+<h1 style="letter-spacing: 0.4em; font-size: 2.5em !important;
+margin-bottom: 0; padding-bottom: 0"> IntelliHealer </h1>
+
+<p style="color: #00746F; font-variant: small-caps; font-weight: bold;
+margin-bottom: 2em">
+Intelligent Self-Healing Distribution Network</p>
+</embed><section id="home">
+<h1>Home<a class="headerlink" href="#home" title="Permalink to this headline">¶</a></h1>
+<p><strong>IntelliHealer</strong>: An imitation and reinforcement learning platform for self-healing distribution networks.
+IntelliHealer uses imitation learning framework to learn restoration policy for distribution system
+service restoration so as to perform the restoration actions (tie-line switching and reactive power dispatch)
+in real time and in embedded environment.</p>
+<p>It is worth mentioning that the imitation lealrning framework acts as a bridge between reinforcement learning-based
+techniques and mathematical programming-based methods and a way to leverage well-studied mathematical programming-based
+decision-making systems for reinforcement learning-based automation.</p>
+<a class="reference internal image-reference" href="_images/Scope.png"><img alt="_images/Scope.png" src="_images/Scope.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/Algorithms.png"><img alt="_images/Algorithms.png" src="_images/Algorithms.png" style="width: 500px;" /></a>
+<p>Such <strong>embeddable</strong> and <strong>computation-free</strong> policies allows us to integrate the self-healing capability into intelligent devices.
+A polit project conducted by the <a class="reference external" href="https://www.sandc.com/en/">S&amp;C Electric</a> can be found <a class="reference external" href="https://www.sandc.com/en/solutions/self-healing-grids/">here</a>.
+For details of this work, please refer to our paper at <a class="reference external" href="https://arxiv.org/abs/2011.14458/">arXiv</a> or <a class="reference external" href="https://ieeexplore.ieee.org/document/9424985?denied=">IEEE</a>.</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>IntelliHealer proposes the imitation learning framework, which improve the sample efficiency
+using a mixed-integer program-based expert compared with the traditional exploration-dominant
+reinforcement learning algorithms.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/fig_avg_ratio_comp_IL_RL_n_5.png"><img alt="_images/fig_avg_ratio_comp_IL_RL_n_5.png" src="_images/fig_avg_ratio_comp_IL_RL_n_5.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>IntelliHealer proposes a hierarchical policy network, which can accommodate both discrete and continuous actions.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/Hybrid_policy.png"><img alt="_images/Hybrid_policy.png" src="_images/Hybrid_policy.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>IntelliHealer provides an <a class="reference external" href="https://gym.openai.com">OpenAI-Gym</a> environment for distribution system restoration,
+which can be connected to <a class="reference external" href="https://stable-baselines3.readthedocs.io/en/master/?badge=master">Stable-Baselines3</a>, a state-of-the-art collection of reinforcement learning algorithms.
+Currently, the Gym environment contains two test feeders: 33-node and 119-node system.</p></li>
+<li><p>IntelliHealer provides distribution system optimization models built on <a class="reference external" href="http://www.pyomo.org/documentation">Pyomo</a>,
+whicn can be used to develop other problem formulations.</p></li>
+</ul>
+</section>
+<section id="related-works">
+<h2>Related Works<a class="headerlink" href="#related-works" title="Permalink to this headline">¶</a></h2>
+<section id="regarding-imitation-and-reinforcement-learning">
+<h3>Regarding Imitation and Reinforcement Learning<a class="headerlink" href="#regarding-imitation-and-reinforcement-learning" title="Permalink to this headline">¶</a></h3>
+<p>The framework development is based on the following work:</p>
+<ul class="simple">
+<li><p>Ross, Stéphane, and Drew Bagnell. “Efficient reductions for imitation learning.” In Proceedings of the thirteenth international conference on artificial intelligence and statistics, pp. 661-668. JMLR Workshop and Conference Proceedings, 2010.</p></li>
+<li><p>Ross, Stéphane, Geoffrey Gordon, and Drew Bagnell. “A reduction of imitation learning and structured prediction to no-regret online learning.” In Proceedings of the fourteenth international conference on artificial intelligence and statistics, pp. 627-635. JMLR Workshop and Conference Proceedings, 2011.</p></li>
+<li><p>Le, Hoang, Nan Jiang, Alekh Agarwal, Miroslav Dudík, Yisong Yue, and Hal Daumé. “Hierarchical imitation and reinforcement learning.” In International Conference on Machine Learning, pp. 2917-2926. PMLR, 2018.</p></li>
+</ul>
+<p>The algorithm implementation is partially based on the work and its repository <a class="reference external" href="https://github.com/hoangminhle/hierarchical_IL_RL">hierarchical_IL_RL</a>:</p>
+<ul class="simple">
+<li><p>Le, Hoang, Nan Jiang, Alekh Agarwal, Miroslav Dudík, Yisong Yue, and Hal Daumé. “Hierarchical imitation and reinforcement learning.” In International Conference on Machine Learning, pp. 2917-2926. PMLR, 2018.</p></li>
+</ul>
+</section>
+<section id="regarding-machine-learning-for-optimization">
+<h3>Regarding Machine Learning for Optimization<a class="headerlink" href="#regarding-machine-learning-for-optimization" title="Permalink to this headline">¶</a></h3>
+<p>The proposed method can also be regarded as one of the three learn-to-optimize paradigms concluded in the following
+literature:</p>
+<ul class="simple">
+<li><p>Bengio, Yoshua, Andrea Lodi, and Antoine Prouvost. “Machine learning for combinatorial optimization: a methodological tour d’horizon.” European Journal of Operational Research (2020).</p></li>
+</ul>
+<p>The three learn-to-optimize paradigms are illustrated below, where our method serves as an end-to-end paradigm:</p>
+<a class="reference internal image-reference" href="_images/Neural_MIP.PNG"><img alt="_images/Neural_MIP.PNG" src="_images/Neural_MIP.PNG" style="width: 700px;" /></a>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">IntelliHealer Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">IntelliHealer</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">IntelliHealer Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="install.html" title="next chapter">Installation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Yichen Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

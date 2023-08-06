@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>project_dis_restoration.NN_model &#8212; IntelliHealer 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-project_dis_restoration.NN_model">
+<span id="project-dis-restoration-nn-model"></span><h1><a class="reference internal" href="#module-project_dis_restoration.NN_model" title="project_dis_restoration.NN_model"><code class="xref py py-mod docutils literal notranslate"><span class="pre">project_dis_restoration.NN_model</span></code></a><a class="headerlink" href="#module-project_dis_restoration.NN_model" title="Permalink to this headline">¶</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.LossHistory" title="project_dis_restoration.NN_model.LossHistory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LossHistory</span></code></a></p></td>
+<td><p>Abstract base class used to build new callbacks.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.CNN_TieLine" title="project_dis_restoration.NN_model.CNN_TieLine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CNN_TieLine</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.DNN_TieLine" title="project_dis_restoration.NN_model.DNN_TieLine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DNN_TieLine</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.DNN_VarCon" title="project_dis_restoration.NN_model.DNN_VarCon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DNN_VarCon</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.ALPHA" title="project_dis_restoration.NN_model.ALPHA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ALPHA</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.GAMMA" title="project_dis_restoration.NN_model.GAMMA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GAMMA</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.LEARNING_RATE" title="project_dis_restoration.NN_model.LEARNING_RATE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LEARNING_RATE</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.TRAIN_HIST_SIZE" title="project_dis_restoration.NN_model.TRAIN_HIST_SIZE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TRAIN_HIST_SIZE</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.EXPERIENCE_MEMORY" title="project_dis_restoration.NN_model.EXPERIENCE_MEMORY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPERIENCE_MEMORY</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.BATCH_SIZE" title="project_dis_restoration.NN_model.BATCH_SIZE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BATCH_SIZE</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.MEMORY_SIZE" title="project_dis_restoration.NN_model.MEMORY_SIZE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MEMORY_SIZE</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.EXPLORATION_MAX" title="project_dis_restoration.NN_model.EXPLORATION_MAX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLORATION_MAX</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.EXPLORATION_MIN" title="project_dis_restoration.NN_model.EXPLORATION_MIN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLORATION_MIN</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#project_dis_restoration.NN_model.EXPLORATION_DECAY" title="project_dis_restoration.NN_model.EXPLORATION_DECAY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLORATION_DECAY</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.ALPHA">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">ALPHA</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0.1</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.ALPHA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.GAMMA">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">GAMMA</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0.95</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.GAMMA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.LEARNING_RATE">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">LEARNING_RATE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0.001</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.LEARNING_RATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.TRAIN_HIST_SIZE">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">TRAIN_HIST_SIZE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">100000</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.TRAIN_HIST_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.EXPERIENCE_MEMORY">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">EXPERIENCE_MEMORY</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">100000</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.EXPERIENCE_MEMORY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.BATCH_SIZE">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">BATCH_SIZE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">32</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.BATCH_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.MEMORY_SIZE">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">MEMORY_SIZE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">10000000</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.MEMORY_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.EXPLORATION_MAX">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">EXPLORATION_MAX</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1.0</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.EXPLORATION_MAX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.EXPLORATION_MIN">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">EXPLORATION_MIN</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0.01</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.EXPLORATION_MIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.EXPLORATION_DECAY">
+<span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">EXPLORATION_DECAY</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0.999</span></em><a class="headerlink" href="#project_dis_restoration.NN_model.EXPLORATION_DECAY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.LossHistory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">LossHistory</span></span><a class="headerlink" href="#project_dis_restoration.NN_model.LossHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">keras.callbacks.Callback</span></code></p>
+<p>Abstract base class used to build new callbacks.</p>
+<dl class="simple">
+<dt># Properties</dt><dd><dl class="simple">
+<dt>params: dict. Training parameters</dt><dd><p>(eg. verbosity, batch size, number of epochs…).</p>
+</dd>
+<dt>model: instance of <cite>keras.models.Model</cite>.</dt><dd><p>Reference of the model being trained.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>The <cite>logs</cite> dictionary that callback methods
+take as argument will contain keys for quantities relevant to
+the current batch or epoch.</p>
+<p>Currently, the <cite>.fit()</cite> method of the <cite>Sequential</cite> model class
+will include the following quantities in the <cite>logs</cite> that
+it passes to its callbacks:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>on_epoch_end: logs include <cite>acc</cite> and <cite>loss</cite>, and</dt><dd><p>optionally include <cite>val_loss</cite>
+(if validation is enabled in <cite>fit</cite>), and <cite>val_acc</cite>
+(if validation and accuracy monitoring are enabled).</p>
+</dd>
+<dt>on_batch_begin: logs include <cite>size</cite>,</dt><dd><p>the number of samples in the current batch.</p>
+</dd>
+<dt>on_batch_end: logs include <cite>loss</cite>, and optionally <cite>acc</cite></dt><dd><p>(if accuracy monitoring is enabled).</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.LossHistory.on_train_begin">
+<span class="sig-name descname"><span class="pre">on_train_begin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.LossHistory.on_train_begin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called at the beginning of training.</p>
+<p>Subclasses should override for any actions to run.</p>
+<dl class="simple">
+<dt># Arguments</dt><dd><dl class="simple">
+<dt>logs: dict, currently no data is passed to this argument for this method</dt><dd><p>but that may change in the future.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.LossHistory.on_batch_end">
+<span class="sig-name descname"><span class="pre">on_batch_end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.LossHistory.on_batch_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>A backwards compatibility alias for <cite>on_train_batch_end</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.CNN_TieLine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">CNN_TieLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation_space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_space</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.CNN_TieLine" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.CNN_TieLine.collect">
+<span class="sig-name descname"><span class="pre">collect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expert_a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.CNN_TieLine.collect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.CNN_TieLine.end_collect">
+<span class="sig-name descname"><span class="pre">end_collect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.CNN_TieLine.end_collect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.CNN_TieLine.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.CNN_TieLine.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.CNN_TieLine.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.CNN_TieLine.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>predict on (a batch of) x</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_TieLine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">DNN_TieLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation_space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_space</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_TieLine" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_TieLine.collect">
+<span class="sig-name descname"><span class="pre">collect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expert_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_TieLine.collect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_TieLine.end_collect">
+<span class="sig-name descname"><span class="pre">end_collect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_TieLine.end_collect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_TieLine.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_TieLine.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_TieLine.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_TieLine.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>predict on (a batch of) x</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_TieLine.remember">
+<span class="sig-name descname"><span class="pre">remember</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">done</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_TieLine.remember" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_TieLine.experience_replay">
+<span class="sig-name descname"><span class="pre">experience_replay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_TieLine.experience_replay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_VarCon">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project_dis_restoration.NN_model.</span></span><span class="sig-name descname"><span class="pre">DNN_VarCon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation_space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_space</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_VarCon" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_VarCon.collect">
+<span class="sig-name descname"><span class="pre">collect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expert_a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_VarCon.collect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_VarCon.end_collect">
+<span class="sig-name descname"><span class="pre">end_collect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_VarCon.end_collect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_VarCon.train">
+<span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_VarCon.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project_dis_restoration.NN_model.DNN_VarCon.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#project_dis_restoration.NN_model.DNN_VarCon.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>predict on (a batch of) x</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">IntelliHealer</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">IntelliHealer Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Yichen Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/autoapi/project_dis_restoration/NN_model/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

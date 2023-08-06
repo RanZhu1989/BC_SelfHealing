@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+project_dis_restoration.egg-info/PKG-INFO
+project_dis_restoration.egg-info/SOURCES.txt
+project_dis_restoration.egg-info/dependency_links.txt
+project_dis_restoration.egg-info/requires.txt
+project_dis_restoration.egg-info/top_level.txt
