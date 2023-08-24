@@ -1,5 +1,3 @@
-LICENSE
-README.md
 setup.py
 project_dis_restoration/NN_model.py
 project_dis_restoration/__init__.py
