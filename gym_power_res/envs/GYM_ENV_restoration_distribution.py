@@ -126,7 +126,7 @@ class RestorationDisEnvRL(gym.Env):
     self.sim_case = OutageManage()
     self.sim_case.data_preparation(self.ppc, self.disturbance, self.VS, self.dV)
     self.sim_case.solve_load_pickup(self.state_line_status)
-    opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+    opt = pm.SolverFactory("cplex")
     # opt = pm.SolverFactory("cplex")
     opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
     results = opt.solve(self.sim_case.model, tee=False)
@@ -214,7 +214,7 @@ class RestorationDisEnvRL(gym.Env):
 
       # =====================  solve for load status =====================
       self.sim_case.solve_load_pickup(action_line, self.state_load_status)
-      opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+      opt = pm.SolverFactory("cplex")
       # opt = pm.SolverFactory("cplex")
       opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
       results = opt.solve(self.sim_case.model, tee=False)
@@ -414,7 +414,7 @@ class RestorationDisEnv(gym.Env):
     self.sim_case = OutageManage()
     self.sim_case.data_preparation(self.ppc, self.disturbance, self.VS, self.dV)
     self.sim_case.solve_load_pickup(self.state_line_status)
-    opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+    opt = pm.SolverFactory("cplex")
     # opt = pm.SolverFactory("cplex")
     opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
     results = opt.solve(self.sim_case.model, tee=False)
@@ -502,7 +502,7 @@ class RestorationDisEnv(gym.Env):
 
       # =====================  solve for load status =====================
       self.sim_case.solve_load_pickup(action_line, self.state_load_status)
-      opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+      opt = pm.SolverFactory("cplex")
       # opt = pm.SolverFactory("cplex")
       opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
       results = opt.solve(self.sim_case.model, tee=False)
@@ -717,7 +717,7 @@ class RestorationDisEnv119(gym.Env):
     self.sim_case = OutageManage()
     self.sim_case.data_preparation(self.ppc, self.disturbance, self.VS, self.dV)
     self.sim_case.solve_load_pickup(self.state_line_status)
-    opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')  #
+    opt = pm.SolverFactory("cplex")  #
     # opt = pm.SolverFactory("cplex")
     opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
     results = opt.solve(self.sim_case.model, tee=False)
@@ -825,7 +825,7 @@ class RestorationDisEnv119(gym.Env):
 
       # =====================  solve for load status =====================
       self.sim_case.solve_load_pickup(action_line, self.state_load_status)
-      opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')  #
+      opt = pm.SolverFactory("cplex")  #
       # opt = pm.SolverFactory("cplex")
       opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
       results = opt.solve(self.sim_case.model, tee=False)
@@ -1050,7 +1050,7 @@ class RestorationDisVarConEnv(gym.Env):
     self.sim_case = OutageManage()
     self.sim_case.data_preparation(self.ppc, self.disturbance, VS=self.VS, dV=self.dV)
     self.sim_case.solve_load_pickup_varcon(self.state_line_status, self.state_varcon)
-    opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+    opt = pm.SolverFactory("cplex")
     opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
     results = opt.solve(self.sim_case.model, tee=False)
 
@@ -1157,7 +1157,7 @@ class RestorationDisVarConEnv(gym.Env):
 
       # =====================  solve for load status =====================
       self.sim_case.solve_load_pickup_varcon(action_line, action_varcon, self.state_load_status)
-      opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+      opt = pm.SolverFactory("cplex")
       opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
       results = opt.solve(self.sim_case.model, tee=False)
 

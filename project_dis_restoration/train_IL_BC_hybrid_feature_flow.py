@@ -118,7 +118,7 @@ class Agent:
         expert = OutageManage()
         expert.data_preparation(env.ppc, env.disturbance)
         expert.solve_network_restoration_varcon(len(env.exploration_seq_idx), env.state_line_status, env.state_varcon, env.state_load_status)
-        opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+        opt = pm.SolverFactory("cplex")
         opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
         expert_result = opt.solve(expert.model, tee=False)
 
@@ -392,7 +392,7 @@ class Agent:
             expert_1 = OutageManage()
             expert_1.data_preparation(ppc_1, env.disturbance, 1.05, 0.05)
             expert_1.solve_network_restoration(len(env.exploration_seq_idx), env.state_line_status, env.state_load_status)
-            opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+            opt = pm.SolverFactory("cplex")
             opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
             expert_result_1 = opt.solve(expert_1.model, tee=False)
             # if optimal, get the optimal value
@@ -411,7 +411,7 @@ class Agent:
         expert = OutageManage()
         expert.data_preparation(ppc, env.disturbance, 1.05, 0.05)
         expert.solve_network_restoration_varcon(len(env.exploration_seq_idx), env.state_line_status, env.state_varcon, env.state_load_status)
-        opt = pm.SolverFactory("cplex", executable='/Applications/CPLEX_Studio128/cplex/bin/x86-64_osx/cplex')
+        opt = pm.SolverFactory("cplex")
         opt.options['mipgap'] = 0  # if gap=b, then it is (b*100) %
         expert_result = opt.solve(expert.model, tee=False)
         # if optimal, get the optimal value
