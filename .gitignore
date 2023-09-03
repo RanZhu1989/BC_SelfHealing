@@ -5,4 +5,5 @@ MNIST/**
 *.DS_Store
 __pycache__/
 results/**
-cplex.log
+*.log
+.vscode/**
